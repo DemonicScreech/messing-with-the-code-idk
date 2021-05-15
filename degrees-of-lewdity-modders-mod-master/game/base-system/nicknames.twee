@@ -7,13 +7,13 @@ Underworld nickname:
 			<<if $famebestiality gte 400>>
 				<<if $famescrap gte 400>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Our Boy
 						<<else>>
 							Our Girl
 						<</if>>
 					<<else>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							The Boy
 						<<else>>
 							The Girl
@@ -121,7 +121,7 @@ Underworld nickname:
 			<<else>>
 				<<if $famescrap gte 400>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Pimp
 						<<else>>
 							Madame
@@ -131,7 +131,7 @@ Underworld nickname:
 					<</if>>
 				<<else>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Slut Dad
 						<<else>>
 							Slut Mum
@@ -149,7 +149,7 @@ Underworld nickname:
 			<<if $famebestiality gte 400>>
 				<<if $famescrap gte 400>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Hound Father
 						<<else>>
 							Hound Mother
@@ -203,7 +203,7 @@ Underworld nickname:
 					<</if>>
 				<<else>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Whoredad
 						<<else>>
 							Whoremum
@@ -236,7 +236,7 @@ Underworld nickname:
 						The Rough One
 					<<else>>
 						<<if $player.gender is "m">>
-							Spear-Prick
+							Spear-Dick
 						<<else>>
 							Vagina Dentata
 						<</if>>
@@ -253,7 +253,7 @@ Underworld nickname:
 			<<if $famebestiality gte 400>>
 				<<if $famescrap gte 400>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Den Father
 						<<else>>
 							Den Mother
@@ -277,7 +277,7 @@ Underworld nickname:
 					<</if>>
 				<<else>>
 					<<if $famepimp gte 400>>
-						<<if $player.gender is "m">>
+						<<if $player.gender_appearance is "m">>
 							Dad
 						<<else>>
 							Mum
@@ -314,7 +314,7 @@ Town nickname:
 			<<if $famesocial gte 400>>
 				Orchid
 			<<else>>
-				<<if $player.gender is "m">>
+				<<if $player.gender_appearance is "m">>
 					Suspicious Shop Boy
 				<<else>>
 					Suspicious Shop Girl
@@ -322,13 +322,13 @@ Town nickname:
 			<</if>>
 		<<else>>
 			<<if $famesocial gte 400>>
-				<<if $player.gender is "m">>
+				<<if $player.gender_appearance is "m">>
 					Party Boy
 				<<else>>
 					Party Girl
 				<</if>>
 			<<else>>
-				<<if $player.gender is "m">>
+				<<if $player.gender_appearance is "m">>
 					Lewd Boy
 				<<else>>
 					Lewd Girl
@@ -356,7 +356,7 @@ Town nickname:
 			<<if $famesocial gte 400>>
 				Tulip
 			<<else>>
-				<<if $player.gender is "m">>
+				<<if $player.gender_appearance is "m">>
 					Shop Boy
 				<<else>>
 					Shop Girl
