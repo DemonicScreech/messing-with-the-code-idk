@@ -1730,25 +1730,31 @@ Your overall performance is
 <br><br>
 
 __Insecurities__ - <i>Scrutiny becomes harder to take as insecurity increases, inflicting more stress and damaging control. Acceptance renders you immune to the effect.</i><br><br>
-<<if $insecurity_penis_tiny gte 1 and $penissize lte 0 and $acceptance_penis_tiny lte 999>>
-	<span class="red">Insecurity: Tiny Penis</span>
-	<div class="meter">
-		<<set _percent=Math.floor(($insecurity_penis_tiny/1000)*100)>>
-		<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
-	</div>
-	<<if $acceptance_penis_tiny gte 1 and $acceptance_penis_tiny lte 999 and $penissize lte 0>>
-		<span class="green">Acceptance: Tiny Penis</span>
+<<if $player.gender is "m" and $player.gender_appearance is "f" and $penissize lte 0>>
+	<<set $acceptance_penis_tiny gte 1 and $acceptance_penis_tiny lte 999>>
+<<else>>
+	<<if $player.gender is "m" and $insecurity_penis_tiny gte 1 and $penissize lte 0 and $acceptance_penis_tiny lte 999>>
+		<span class="red">Insecurity: Tiny Penis</span>
 		<div class="meter">
-			<<set _percent=Math.floor(($acceptance_penis_tiny/1000)*100)>>
-			<<print '<div class="greenbar" style="width:' + _percent + '%"></div>'>>
+			<<set _percent=Math.floor(($insecurity_penis_tiny/1000)*100)>>
+			<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
 		</div>
+		<<if $acceptance_penis_tiny gte 1 and $acceptance_penis_tiny lte 999 and $penissize lte 0>>
+			<span class="green">Acceptance: Tiny Penis</span>
+			<div class="meter">
+				<<set _percent=Math.floor(($acceptance_penis_tiny/1000)*100)>>
+				<<print '<div class="greenbar" style="width:' + _percent + '%"></div>'>>
+			</div>
+		<</if>>
 	<</if>>
-<</if>>
-<<if $insecurity_penis_small gte 1 and $penissize is 1 and $acceptance_penis_small lte 999>>
-	<span class="red">Insecurity: Small Penis</span>
-	<div class="meter">
-		<<set _percent=Math.floor(($insecurity_penis_small/1000)*100)>>
-		<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
+<<if $player.gender is "m" and $player.gender_appearance is "f" and $penissize is 1>>
+	<<set acceptance_penis_small gte 1 and acceptance_penis_small lte 999>>
+<<else>>
+	<<if $player.gender is "m" and $insecurity_penis_small gte 1 and $penissize is 1 and $acceptance_penis_small lte 999>>
+		<span class="red">Insecurity: Small Penis</span>
+		<div class="meter">
+			<<set _percent=Math.floor(($insecurity_penis_small/1000)*100)>>
+			<<print '<div class="redbar" style="width:' + _percent + '%"></div>'>>
 	</div>
 	<<if $acceptance_penis_small gte 1 and $acceptance_penis_small lte 999 and $penissize is 1>>
 		<span class="green">Acceptance: Small Penis</span>
@@ -1789,6 +1795,8 @@ __Insecurities__ - <i>Scrutiny becomes harder to take as insecurity increases, i
 		<</if>>
 	<</if>>
 <</if>>
+<<if $player.gender_appearance is "m" and player.gender is "f" and breastsize lte 1>>
+	<<set $acceptance_breasts_tiny gte 1 and acceptance_breats_tiny lte 999>>
 <<if $insecurity_breasts_tiny gte 1 and $breastsize lte 0 and $player.gender is "f" and $acceptance_breasts_tiny lte 999>>
 	<span class="red">Insecurity: Flat Chest</span>
 	<div class="meter">
